@@ -1,9 +1,31 @@
 import React from 'react';
 
-const Comment = () => {
+const Comment = ({comment, replies}) => {
     return (
-        <div>
-            <h5>This is Single Comments Component are here</h5>
+        <div className="comment">
+            <div className='comment-image-container'>
+                <img src="/user-icon.png" alt="" />
+            </div>
+            <div className='comment-right-part'>
+                <div className="comment-content">
+                    <div className="comment-author">
+                        {comment.username}
+                    </div>
+                    <div className='comment-author'> {comment.createdAt} </div>
+                </div>
+                <div className="comment-text">{comment.body} </div>
+                {
+                replies.length > 0  && (
+                    <div className='replies'>
+                        {
+                            replies.map(reply => (
+                                <Comment  comment={reply} key={reply.id} replies={[]} />
+                            ))
+                        }
+                    </div>
+                )
+                }
+            </div>
         </div>
     );
 };
