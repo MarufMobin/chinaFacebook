@@ -21,7 +21,7 @@ const Home = () => {
                 <div className="col-4"></div>
                 <div className="col-4">
                 <div>
-                    <button onClick={modalOpen}>Click This One </button>
+                    <button onClick={()=>setModalStatus(!modalStatus)} >Click This One </button>
                    
                 </div>
                 <div>
@@ -34,7 +34,7 @@ const Home = () => {
             </div>
             {/* Open Modal for Post */}
             {
-                modalStatus && <Modal modalOpen={modalOpen} />
+                modalStatus && <Modal setModalStatus={setModalStatus} modalStatus={modalStatus}  />
             }
         </div>
     );

@@ -16,7 +16,7 @@ const Modal = ({ setModalStatus, modalStatus }) => {
                                 </h4>
                                 <i role="button"
                                     onClick={() => setModalStatus(!modalStatus)}
-                                    class="fa fa-times fs-4 p-1 text-black-50 " aria-hidden="true"
+                                    className="fa fa-times fs-4 p-1 text-black-50 " aria-hidden="true"
                                 ></i>
                             </div>
                             <div className="d-flex ">
@@ -24,9 +24,9 @@ const Modal = ({ setModalStatus, modalStatus }) => {
                                 <span className='ms-3'>
                                     <h6 className='m-0 p-0'>Abdul jabbar</h6>
                                     <button style={{ fontSize: '14px', fontWeight: '500' }} className='mt-1 border-0 d-flex  align-items-center'>
-                                        <i class="fa fa-globe" aria-hidden="true"></i>
+                                        <i className="fa fa-globe" aria-hidden="true"></i>
                                         <span className='mx-1'> Public</span>
-                                        <i class="fa fa-sort-desc align-self-baseline" aria-hidden="true"></i>
+                                        <i className="fa fa-sort-desc align-self-baseline" aria-hidden="true"></i>
                                     </button>
                                 </span>
                             </div>
@@ -39,15 +39,15 @@ const Modal = ({ setModalStatus, modalStatus }) => {
                                         Add to your post
                                     </span>
                                     <span style={{}} className=''>
-                                        <i role={'button'} onClick={() => setModalDragAndDrop(!modalDragAndDrop)} class="fa fs-4 me-3 text-success fa-file-image-o" aria-hidden="true"></i>
-                                        <i role={'button'} class="fa fs-4 me-3 fa-tags text-primary" aria-hidden="true"></i>
-                                        <i role={'button'} class="fa fs-4 me-3 fa-smile-o text-warning" aria-hidden="true"></i>
-                                        <i role={'button'} class="fa fs-4 me-3 fa-map-marker text-danger" aria-hidden="true"></i>
-                                        <i role={'button'} class="fa fs-4 me-3 fa-microphone text-danger" aria-hidden="true"></i>
-                                        <i role={'button'} class="fa fs-4  fa-ellipsis-h " aria-hidden="true"></i>
+                                        <i role={'button'} onClick={() => setModalDragAndDrop(!modalDragAndDrop)} className="fa fs-4 me-3 text-success fa-file-image-o" aria-hidden="true"></i>
+                                        <i role={'button'} className="fa fs-4 me-3 fa-tags text-primary" aria-hidden="true"></i>
+                                        <i role={'button'} className="fa fs-4 me-3 fa-smile-o text-warning" aria-hidden="true"></i>
+                                        <i role={'button'} className="fa fs-4 me-3 fa-map-marker text-danger" aria-hidden="true"></i>
+                                        <i role={'button'} className="fa fs-4 me-3 fa-microphone text-danger" aria-hidden="true"></i>
+                                        <i role={'button'} className="fa fs-4  fa-ellipsis-h " aria-hidden="true"></i>
                                     </span>
                                 </div>
-                                <button type="button" class="btn btn-primary w-100">Post</button>
+                                <button type="button" className="btn btn-primary w-100">Post</button>
                             </form>
                         </div>
                     </div>
