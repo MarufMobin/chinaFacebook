@@ -1,13 +1,41 @@
 import React, { useEffect, useState } from 'react';
+import {getComments as getCommentsApi } from '../../api';
+import Comment from '../Comment/Comment';
+import CommentsFrom from '../CommentsForm/CommentsFrom';
 
 const Comments = ({currentUserId}) => {
-    const [ backendComments, setBackendComments ] = useState([])
+    const [ backendComments, setBackendComments ] = useState([]);
+    // Main Comment in database
+    const rootComments = backendComments.filter( backendComment => backendComment.parentId === null )
+    // Replies Comment in Database 
+    const getReplies = commentId => {
+        return backendComments.filter( backendComment => backendComment.parentId === commentId ).sort( (a, b) => new Date(a.createteAt).getTime() - new Date(b.createteAt).getTime)
+    }
     useEffect(() =>{
+        getCommentsApi().then( data => setBackendComments(data));
+    }, []);
 
-    }, [])
+    const addComment = ( text, parentId ) =>{
+        console.log('addComment', text, parentId)
+    }
+
+    console.log(backendComments)
     return (
-        <div>
-            
+        <div className='commnets'>
+            <h5 className="comments-title"> </h5>
+            <div className="comment-form-title">
+                Write Comment
+            </div>
+            <CommentsFrom submitLabel="write" handleSubmit={addComment} />
+            <div className="comments-container">
+                {
+                    rootComments.map( rootComment => (
+                        <div key={rootComment.id}>
+                            <Comment key={rootComment.id} comment={rootComment} replies={getReplies(rootComment.id)} />
+                        </div>
+                    ))
+                }    
+            </div>
         </div>
     );
 };
