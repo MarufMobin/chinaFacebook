@@ -6,6 +6,7 @@ import Modal from '../../components/Modal/Modal';
 const Home = () => {
     // Show Modal Componets
     const [ modalStatus , setModalStatus ] = useState(false)
+
     // Show Hidden Comments 
     const [ showComments, setShowComments ] = useState(false);
     const showHiddenComments = () =>{
