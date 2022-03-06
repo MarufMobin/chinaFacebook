@@ -3,13 +3,31 @@
     height: 100vh;
     position: fixed;
     top: 0px;
-    background-color: #f3f3f4e0;
+    background-color: #ebebeba9;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .custom-card {
-    background-color: red;
+    background-color: rgb(255, 255, 255);
     padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px 0.1px rgb(128 128 128 / 71%);
+}
+
+.fa-times:hover {
+    background-color: #D3D4D4;
+    border-radius: 100%;
+
+}
+
+textarea {
+    resize: none;
+
+}
+
+textarea:focus {
+    outline: none;
+
 }

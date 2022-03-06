@@ -6,6 +6,7 @@ import Modal from '../../components/Modal/Modal';
 const Home = () => {
     // Show Modal Componets
     const [ modalStatus , setModalStatus ] = useState(false)
+
     const modalOpen = () =>{
         setModalStatus(!modalStatus)
     }
@@ -29,6 +30,7 @@ const Home = () => {
                     { showComments && <Comments currentUserId="1" /> }
                 </div>
                 <div className="col-4"></div>
+
             </div>
             {/* Open Modal for Post */}
             {
