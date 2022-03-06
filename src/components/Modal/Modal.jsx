@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import './Modal.css'
 import profileImage from '../../Media/profile.jpg'
-import ModalDragAndDrop from '../ModalDragAndDrop';
+import ModalDragAndDrop from '../ModalDragAndDrop/ModalDragAndDrop';
 const Modal = ({ setModalStatus, modalStatus }) => {
     const [modalDragAndDrop, setModalDragAndDrop] = useState(false)
     return (
         <div className='modal-background'>
             <div className='container'>
                 <div className="row">
-                    <div className="col-6 mx-auto">
+                    <div className="col-lg-6 col-12 mx-auto">
                         <div className='custom-card'>
                             <div className='d-flex justify-content-between  align-items-center '>
                                 <h4 className='w-100 text-center'>
@@ -32,9 +32,9 @@ const Modal = ({ setModalStatus, modalStatus }) => {
                             </div>
                             <hr className='bg-opacity-10 mb-3' />
                             <form action="">
-                                <textarea autoFocus name="" style={{ resize: 'none' }} id="" placeholder="What's on your maind, Maruf?" className='w-100 border-0 fs-4' cols="50" rows={!modalDragAndDrop ? '4' : '1'}></textarea>
-                                {modalDragAndDrop ? <ModalDragAndDrop></ModalDragAndDrop> : <></>}
-                                <div className='d-flex justify-content-between py-3 px-3 border border-2 rounded-3 mb-2'>
+                                <textarea autoFocus name="" style={{ resize: 'none' }} id="" placeholder="What's on your maind, Maruf?" className='w-100 border-0 fs-4' cols="50" rows={!modalDragAndDrop ? '4' : '2'}></textarea>
+                                {modalDragAndDrop ? <ModalDragAndDrop modalDragAndDrop={modalDragAndDrop} setModalDragAndDrop={setModalDragAndDrop}></ModalDragAndDrop> : <></>}
+                                <div className='d-flex justify-content-between py-3 px-3 border border-1 rounded-3 mb-2'>
                                     <span role={'button'} style={{ fontWeight: '500' }}>
                                         Add to your post
                                     </span>

@@ -7,9 +7,6 @@ const Home = () => {
     // Show Modal Componets
     const [ modalStatus , setModalStatus ] = useState(false)
 
-    const modalOpen = () =>{
-        setModalStatus(!modalStatus)
-    }
     // Show Hidden Comments 
     const [ showComments, setShowComments ] = useState(false);
     const showHiddenComments = () =>{
